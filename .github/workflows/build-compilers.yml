@@ -1,0 +1,104 @@
+# Builds Valve's vbsp, vvis and vrad (Source SDK code of 9 October 2026) with the changes in
+# compilers/changes, which make them write maps in the Old Source format. The result is the
+# "OldSourceCompilers" artifact of the run.
+name: Build Old Source compilers
+
+on:
+  push:
+    paths:
+      - "compilers/**"
+      - ".github/workflows/build-compilers.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 120
+    env:
+      SDK_COMMIT: be57e3d01ac7d7aa6a2cacbfef187c0b46616db0
+    steps:
+      - name: Get this repository
+        uses: actions/checkout@v4
+
+      - name: Get Valve's code (the version the changes are made for)
+        shell: pwsh
+        run: |
+          git clone -q --depth 1 --filter=blob:none --no-checkout https://github.com/ValveSoftware/source-sdk-2013 sdk
+          if ($LASTEXITCODE -ne 0) { throw "clone failed" }
+          cd sdk
+          git fetch -q --depth 1 --filter=blob:none origin $env:SDK_COMMIT
+          if ($LASTEXITCODE -ne 0) { throw "fetching $env:SDK_COMMIT failed" }
+          git sparse-checkout set src game/bin
+          git checkout -q $env:SDK_COMMIT
+          if ($LASTEXITCODE -ne 0) { throw "checkout failed" }
+          if (!(Test-Path src\devtools\bin\vpc.exe)) { throw "no vpc.exe in Valve's code" }
+
+      - name: Put in the Old Source changes
+        shell: pwsh
+        run: |
+          $base = (Resolve-Path compilers\changes).Path
+          Get-ChildItem $base -Recurse -File | ForEach-Object {
+            $rel = $_.FullName.Substring($base.Length + 1)
+            $dst = Join-Path sdk $rel
+            if (!(Test-Path $dst) -and $_.Name -ne 'oldsourceformat.h') { throw "Valve's code has no $rel" }
+            Copy-Item $_.FullName $dst -Force
+            Write-Host "changed $rel"
+          }
+
+      - name: Make the projects (Valve's VPC)
+        shell: pwsh
+        working-directory: sdk/src
+        run: |
+          .\devtools\bin\vpc.exe /hl2mp /tf /define:SOURCESDK +tier1 +mathlib +raytrace +fgdlib +vbsp +vvis_dll +vvis_launcher +vrad_dll +vrad_launcher /mksln oldsource_compilers.sln
+          if (!(Test-Path oldsource_compilers.sln)) { throw "VPC made no solution" }
+
+      - name: Build
+        shell: pwsh
+        working-directory: sdk/src
+        run: |
+          $vs = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
+          if (!$vs) { throw "no Visual Studio with the C++ tools on this machine" }
+          Write-Host "Visual Studio: $vs"
+          $msbuild = Join-Path $vs 'MSBuild\Current\Bin\amd64\MSBuild.exe'
+          $toolsets = @(Get-ChildItem "$vs\MSBuild\Microsoft\VC\*\Platforms\x64\PlatformToolsets\*" -Directory | ForEach-Object Name)
+          Write-Host "Toolsets: $($toolsets -join ', ')"
+          $extra = @()
+          if ($toolsets -notcontains 'v143') {
+            $newer = $toolsets | Where-Object { $_ -match '^v(\d+)$' -and [int]$Matches[1] -gt 143 } | Sort-Object -Descending | Select-Object -First 1
+            if (!$newer) { throw "no v143 or newer toolset" }
+            $extra += "/p:PlatformToolset=$newer"
+          }
+          New-Item -ItemType Directory -Force ..\game\bin\x64 | Out-Null
+          & $msbuild oldsource_compilers.sln /p:Configuration=Release /p:Platform=win64 /m /nr:false /nologo /v:minimal /fl "/flp:logfile=$env:GITHUB_WORKSPACE\build_log.txt;verbosity=normal" @extra
+          if ($LASTEXITCODE -ne 0) { throw "the build failed" }
+
+      - name: Collect the compilers
+        shell: pwsh
+        run: |
+          $out = New-Item -ItemType Directory -Force OldSourceCompilers
+          foreach ($f in 'vbsp.exe', 'vvis.exe', 'vvis_dll.dll', 'vrad.exe', 'vrad_dll.dll') {
+            $p = "sdk\game\bin\x64\$f"
+            if (!(Test-Path $p)) { throw "$f wasn't built" }
+            Copy-Item $p $out
+          }
+          Copy-Item compilers\INSTALL.txt, compilers\LICENSE, compilers\thirdpartylegalnotices.txt $out
+          $b = [IO.File]::ReadAllBytes("$out\vbsp.exe")
+          if (-not ([Text.Encoding]::ASCII.GetString($b).Contains("Old Source format"))) { throw "vbsp.exe has no Old Source banner" }
+          Get-ChildItem $out | Format-Table Name, Length
+
+      - name: Upload the compilers
+        uses: actions/upload-artifact@v4
+        with:
+          name: OldSourceCompilers
+          path: OldSourceCompilers
+
+      - name: Upload the build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build_log
+          path: build_log.txt
+          if-no-files-found: ignore
