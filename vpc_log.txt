@@ -1,0 +1,48 @@
+VPC - Valve Project Creator (Build: Mar  8 2025 19:08:18)
+[0mCopyright (c) Valve Corporation. All Rights Reserved.
+[0m
+[0m[38;2;0;255;255mSource Path: D:\a\oldsourcetools\oldsourcetools\sdk\src
+[0m[38;2;0;255;255mTarget Platform: win64
+[0m[38;2;0;255;255mGenerating for Visual Studio 2022.
+[0m
+[0m
+[0mParsing: tier1.vpc
+[0mSaving... Project: 'tier1' File: 'tier1_win64.vcxproj'
+[0m
+[0mParsing: mathlib.vpc
+[0mSaving... Project: 'mathlib' File: 'mathlib_win64.vcxproj'
+[0m
+[0mParsing: raytrace.vpc
+[0mSaving... Project: 'Raytrace' File: 'raytrace_win64.vcxproj'
+[0m
+[0mParsing: fgdlib.vpc
+[0mSaving... Project: 'fgdlib' File: 'fgdlib_win64.vcxproj'
+[0m
+[0mParsing: vbsp.vpc
+[0mSaving... Project: 'VBSP' File: 'vbsp_win64.vcxproj'
+[0m
+[0mParsing: vvis_dll.vpc
+[0mSaving... Project: 'VVIS' File: 'vvis_dll_win64.vcxproj'
+[0m
+[0mParsing: vvis_launcher.vpc
+[0m[38;2;255;255;0mWARNING: File (StdAfx.cpp) creates a PCH (/Yc), but has no 'UsePCHThroughFile' command, so there is no way to tell *which* PCH it creates!
+
+[0m[38;2;255;255;0mWARNING: File (StdAfx.cpp) creates a PCH (/Yc), but has no 'UsePCHThroughFile' command, so there is no way to tell *which* PCH it creates!
+
+[0mSaving... Project: 'VVIS (Launcher)' File: 'vvis_launcher_win64.vcxproj'
+[0m
+[0mParsing: vrad_dll.vpc
+[0mSaving... Project: 'VRAD' File: 'vrad_dll_win64.vcxproj'
+[0m
+[0mParsing: vrad_launcher.vpc
+[0m[38;2;255;255;0mWARNING: File (StdAfx.cpp) creates a PCH (/Yc), but has no 'UsePCHThroughFile' command, so there is no way to tell *which* PCH it creates!
+
+[0m[38;2;255;255;0mWARNING: File (StdAfx.cpp) creates a PCH (/Yc), but has no 'UsePCHThroughFile' command, so there is no way to tell *which* PCH it creates!
+
+[0mSaving... Project: 'VRAD (Launcher)' File: 'vrad_launcher_win64.vcxproj'
+[0m
+[0mBuilding partial dependency set (libs only)...
+[0m.[0m.[0m.[0m.[0m.[0m.[0m.[0m.[0m.[0m
+[0m
+[0mWriting solution file D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln.
+[0m

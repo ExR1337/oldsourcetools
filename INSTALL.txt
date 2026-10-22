@@ -1,0 +1,24 @@
+OLD SOURCE COMPILERS
+====================
+
+Valve's vbsp, vvis and vrad (their Source SDK code of 9 October 2026), changed to write
+maps in the Old Source format. When they run they show:
+    Valve Software - vbsp.exe (Oct 22 2026, Old Source format)
+
+INSTALLING
+1. Open ...\steamapps\common\Counter-Strike Source\bin\x64 (it has Valve's 64-bit engine
+   files these compilers run with: tier0.dll, vstdlib.dll, filesystem_stdio.dll,
+   vphysics.dll, materialsystem.dll, shaderapiempty.dll, steam_api64.dll).
+2. If vbsp.exe, vvis.exe, vvis_dll.dll, vrad.exe or vrad_dll.dll is already there, move
+   it into a new folder "valve_original" (to keep it).
+3. Copy the five files from here into that bin\x64 folder.
+4. In Old Source Port Tool > Compile map, choose that bin\x64 folder as the compilers
+   folder. "Turn maps from newer compilers into the Old Source format" can stay ticked:
+   with these compilers it finds nothing to change.
+
+The compilers have to sit in a game's bin\x64 folder: they find the game's base content
+(the hl2 folder) from the folder they are in. If a Steam update ever puts Valve's files
+back, copy the five files again.
+
+Changes for the Old Source format: ExR - made by Claude
+Valve's code: Copyright (c) Valve Corporation, under the SOURCE 1 SDK LICENSE (LICENSE).

@@ -1,0 +1,1011 @@
+Build started 10/22/2026 8:11:10 PM.
+Logging verbosity is set to: Normal.
+     1>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" on node 1 (default targets).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Release|win64".
+     1>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (1) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj.metaproj" (2) on node 1 (default targets).
+     2>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj.metaproj" (2) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\fgdlib_win64.vcxproj" (7) on node 1 (default targets).
+     7>PrepareForBuild:
+         Creating directory ".\Release\x64\".
+     1>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (1) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\tier1\tier1_win64.vcxproj" (10) on node 2 (default targets).
+    10>PrepareForBuild:
+         Creating directory ".\Release\x64\".
+     1>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (1) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\mathlib\mathlib_win64.vcxproj" (9) on node 3 (default targets).
+     9>PrepareForBuild:
+         Creating directory ".\Release\x64\".
+     1>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (1) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\raytrace\raytrace_win64.vcxproj" (8) on node 4 (default targets).
+     8>PrepareForBuild:
+         Creating directory ".\Release\x64\".
+     7>PrepareForBuild:
+         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+     8>PrepareForBuild:
+         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+    10>PrepareForBuild:
+         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+     7>PrepareForBuild:
+         Creating directory ".\Release\x64\fgdlib.tlog\".
+     9>PrepareForBuild:
+         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+    10>PrepareForBuild:
+         Creating directory ".\Release\x64\tier1.tlog\".
+     8>PrepareForBuild:
+         Creating directory ".\Release\x64\Raytrace.tlog\".
+     9>PrepareForBuild:
+         Creating directory ".\Release\x64\mathlib.tlog\".
+     7>InitializeBuildStatus:
+         Creating ".\Release\x64\fgdlib.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching ".\Release\x64\fgdlib.tlog\unsuccessfulbuild".
+     9>InitializeBuildStatus:
+         Creating ".\Release\x64\mathlib.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching ".\Release\x64\mathlib.tlog\unsuccessfulbuild".
+     8>InitializeBuildStatus:
+         Creating ".\Release\x64\Raytrace.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching ".\Release\x64\Raytrace.tlog\unsuccessfulbuild".
+    10>InitializeBuildStatus:
+         Creating ".\Release\x64\tier1.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching ".\Release\x64\tier1.tlog\unsuccessfulbuild".
+     8>PreBuildEvent:
+         if EXIST ..\lib\public\x64\raytrace.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\x64\raytrace.lib"') do set valveTmpIsReadOnly="%%A"
+         ) else ( mkdir ..\lib\public\x64 )
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" (
+             attrib -r ..\lib\public\x64\raytrace.lib
+             ..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\x64\raytrace.lib
+             attrib +r ..\lib\public\x64\raytrace.lib
+         )
+         ..\devtools\bin\vpc.exe -crc2 "raytrace_win64.vcxproj"
+         
+         :VCEnd
+     7>PreBuildEvent:
+         if EXIST ..\lib\public\x64\fgdlib.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\x64\fgdlib.lib"') do set valveTmpIsReadOnly="%%A"
+         ) else ( mkdir ..\lib\public\x64 )
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" (
+             attrib -r ..\lib\public\x64\fgdlib.lib
+             ..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\x64\fgdlib.lib
+             attrib +r ..\lib\public\x64\fgdlib.lib
+         )
+         ..\devtools\bin\vpc.exe -crc2 "fgdlib_win64.vcxproj"
+         
+         :VCEnd
+     9>PreBuildEvent:
+         if EXIST ..\lib\public\x64\mathlib.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\x64\mathlib.lib"') do set valveTmpIsReadOnly="%%A"
+         ) else ( mkdir ..\lib\public\x64 )
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" (
+             attrib -r ..\lib\public\x64\mathlib.lib
+             ..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\x64\mathlib.lib
+             attrib +r ..\lib\public\x64\mathlib.lib
+         )
+         ..\devtools\bin\vpc.exe -crc2 "mathlib_win64.vcxproj"
+         
+         :VCEnd
+    10>PreBuildEvent:
+         if EXIST ..\lib\public\x64\tier1.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\x64\tier1.lib"') do set valveTmpIsReadOnly="%%A"
+         ) else ( mkdir ..\lib\public\x64 )
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" (
+             attrib -r ..\lib\public\x64\tier1.lib
+             ..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\x64\tier1.lib
+             attrib +r ..\lib\public\x64\tier1.lib
+         )
+         ..\devtools\bin\vpc.exe -crc2 "tier1_win64.vcxproj"
+         
+         :VCEnd
+     7>PreBuildEvent:
+         A subdirectory or file ..\lib\public\x64 already exists.
+     9>PreBuildEvent:
+         A subdirectory or file ..\lib\public\x64 already exists.
+     8>PreBuildEvent:
+         A subdirectory or file ..\lib\public\x64 already exists.
+    10>PreBuildEvent:
+         A subdirectory or file ..\lib\public\x64 already exists.
+     7>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /I..\utils\common /Z7 /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _LIB /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D _DLL_EXT=.dll /D LIBNAME=fgdlib /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp- /Fo".\Release\x64\/" /Fd".\Release\x64\/fgdlib.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt  /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus gamedata.cpp gdclass.cpp gdvar.cpp inputoutput.cpp wckeyvalues.cpp
+     9>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /I..\public\mathlib /Z7 /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _LIB /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D _DLL_EXT=.dll /D LIBNAME=mathlib /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D MATHLIB_LIB /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\mathlib /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp- /Fo".\Release\x64\/" /Fd".\Release\x64\/mathlib.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt  /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus 3dnow.cpp almostequal.cpp anorms.cpp bumpvects.cpp color_conversion.cpp halton.cpp IceKey.cpp imagequant.cpp lightdesc.cpp mathlib_base.cpp polyhedron.cpp powsse.cpp quantize.cpp randsse.cpp simdvectormatrix.cpp sparse_convolution_noise.cpp spherical.cpp sse.cpp sseconst.cpp ssenoise.cpp vector.cpp vmatrix.cpp
+     8>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /I..\utils\common /Z7 /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _LIB /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D _DLL_EXT=.dll /D LIBNAME=raytrace /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\raytrace /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp- /Fo".\Release\x64\/" /Fd".\Release\x64\/raytrace.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt  /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus raytrace.cpp trace2.cpp trace3.cpp
+    10>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Z7 /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _LIB /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D _DLL_EXT=.dll /D LIBNAME=tier1 /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D TIER1_STATIC_LIB /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\tier1 /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp- /Fo".\Release\x64\/" /Fd".\Release\x64\/tier1.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt  /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus ..\utils\lzma\C\LzmaDec.c bitbuf.cpp byteswap.cpp characterset.cpp checksum_crc.cpp checksum_md5.cpp checksum_sha1.cpp commandbuffer.cpp convar.cpp datamanager.cpp diff.cpp exprevaluator.cpp generichash.cpp ilocalize.cpp interface.cpp KeyValues.cpp keyvaluesjson.cpp kvpacker.cpp lzmaDecoder.cpp mempool.cpp memstack.cpp NetAdr.cpp newbitbuf.cpp rangecheckedvar.cpp reliabletimer.cpp "snappy-sinksource.cpp" "snappy-stubs-internal.cpp" snappy.cpp sparsematrix.cpp splitstring.cpp stringpool.cpp strtools.cpp strtools_unicode.cpp tier1.cpp tokenreader.cpp uniqueid.cpp utlbinaryblock.cpp utlbuffer.cpp utlbufferutil.cpp utlstring.cpp utlsymbol.cpp
+     7>ClCompile:
+         gamedata.cpp
+         gdclass.cpp
+         gdvar.cpp
+         inputoutput.cpp
+     8>ClCompile:
+         raytrace.cpp
+    10>ClCompile:
+         LzmaDec.c
+         bitbuf.cpp
+     8>ClCompile:
+         trace2.cpp
+    10>ClCompile:
+         byteswap.cpp
+     8>ClCompile:
+         trace3.cpp
+    10>ClCompile:
+         characterset.cpp
+     9>ClCompile:
+         3dnow.cpp
+         almostequal.cpp
+         anorms.cpp
+         bumpvects.cpp
+     7>ClCompile:
+         wckeyvalues.cpp
+    10>ClCompile:
+         checksum_crc.cpp
+     9>ClCompile:
+         color_conversion.cpp
+    10>ClCompile:
+         checksum_md5.cpp
+     9>ClCompile:
+         halton.cpp
+    10>ClCompile:
+         checksum_sha1.cpp
+     9>ClCompile:
+         IceKey.cpp
+    10>ClCompile:
+         commandbuffer.cpp
+     9>ClCompile:
+         imagequant.cpp
+     7>D:\a\oldsourcetools\oldsourcetools\sdk\src\public\fgdlib\HelperInfo.h(83,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\fgdlib_win64.vcxproj]
+         (compiling source file 'gdvar.cpp')
+         
+     7>D:\a\oldsourcetools\oldsourcetools\sdk\src\public\fgdlib\HelperInfo.h(83,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\fgdlib_win64.vcxproj]
+         (compiling source file 'gdclass.cpp')
+         
+    10>ClCompile:
+         convar.cpp
+     9>ClCompile:
+         lightdesc.cpp
+     7>D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\wckeyvalues.cpp(194,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\fgdlib_win64.vcxproj]
+    10>ClCompile:
+         datamanager.cpp
+     9>ClCompile:
+         mathlib_base.cpp
+    10>ClCompile:
+         diff.cpp
+     9>ClCompile:
+         polyhedron.cpp
+     7>D:\a\oldsourcetools\oldsourcetools\sdk\src\public\fgdlib\HelperInfo.h(83,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\fgdlib_win64.vcxproj]
+         (compiling source file 'gamedata.cpp')
+         
+    10>ClCompile:
+         exprevaluator.cpp
+     9>ClCompile:
+         powsse.cpp
+    10>ClCompile:
+         generichash.cpp
+     9>ClCompile:
+         quantize.cpp
+    10>ClCompile:
+         ilocalize.cpp
+     9>ClCompile:
+         randsse.cpp
+    10>ClCompile:
+         interface.cpp
+     9>ClCompile:
+         simdvectormatrix.cpp
+    10>ClCompile:
+         KeyValues.cpp
+     9>ClCompile:
+         sparse_convolution_noise.cpp
+    10>ClCompile:
+         keyvaluesjson.cpp
+     9>ClCompile:
+         spherical.cpp
+     8>Lib:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"..\lib\public\x64\raytrace.lib" /NOLOGO /MACHINE:X64  /ignore:4221      .\Release\x64\/raytrace.obj
+         .\Release\x64\/trace2.obj
+         .\Release\x64\/trace3.obj
+    10>ClCompile:
+         kvpacker.cpp
+     9>ClCompile:
+         sse.cpp
+    10>ClCompile:
+         lzmaDecoder.cpp
+     9>ClCompile:
+         sseconst.cpp
+    10>ClCompile:
+         mempool.cpp
+     9>ClCompile:
+         ssenoise.cpp
+    10>ClCompile:
+         memstack.cpp
+     9>ClCompile:
+         vector.cpp
+         vmatrix.cpp
+    10>ClCompile:
+         NetAdr.cpp
+         newbitbuf.cpp
+         rangecheckedvar.cpp
+         reliabletimer.cpp
+         snappy-sinksource.cpp
+     7>Lib:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"..\lib\public\x64\fgdlib.lib" /NOLOGO /MACHINE:X64  /ignore:4221      .\Release\x64\/gamedata.obj
+         .\Release\x64\/gdclass.obj
+         .\Release\x64\/gdvar.obj
+         .\Release\x64\/inputoutput.obj
+         .\Release\x64\/wckeyvalues.obj
+    10>ClCompile:
+         snappy-stubs-internal.cpp
+         snappy.cpp
+         sparsematrix.cpp
+         splitstring.cpp
+         stringpool.cpp
+     8>Lib:
+         raytrace_win64.vcxproj -> D:\a\oldsourcetools\oldsourcetools\sdk\src\lib\public\x64\raytrace.lib
+    10>ClCompile:
+         strtools.cpp
+         strtools_unicode.cpp
+         tier1.cpp
+         tokenreader.cpp
+         uniqueid.cpp
+         utlbinaryblock.cpp
+         utlbuffer.cpp
+     7>Lib:
+         fgdlib_win64.vcxproj -> D:\a\oldsourcetools\oldsourcetools\sdk\src\lib\public\x64\fgdlib.lib
+       FinalizeBuildStatus:
+         Deleting file ".\Release\x64\fgdlib.tlog\unsuccessfulbuild".
+         Touching ".\Release\x64\fgdlib.tlog\fgdlib.lastbuildstate".
+     7>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\fgdlib_win64.vcxproj" (default targets).
+     9>Lib:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"..\lib\public\x64\mathlib.lib" /NOLOGO /MACHINE:X64  /ignore:4221      .\Release\x64\/3dnow.obj
+         .\Release\x64\/almostequal.obj
+         .\Release\x64\/anorms.obj
+         .\Release\x64\/bumpvects.obj
+         .\Release\x64\/color_conversion.obj
+         .\Release\x64\/halton.obj
+         .\Release\x64\/IceKey.obj
+         .\Release\x64\/imagequant.obj
+         .\Release\x64\/lightdesc.obj
+         .\Release\x64\/mathlib_base.obj
+         .\Release\x64\/polyhedron.obj
+         .\Release\x64\/powsse.obj
+         .\Release\x64\/quantize.obj
+         .\Release\x64\/randsse.obj
+         .\Release\x64\/simdvectormatrix.obj
+         .\Release\x64\/sparse_convolution_noise.obj
+         .\Release\x64\/spherical.obj
+         .\Release\x64\/sse.obj
+         .\Release\x64\/sseconst.obj
+         .\Release\x64\/ssenoise.obj
+         .\Release\x64\/vector.obj
+         .\Release\x64\/vmatrix.obj
+    10>ClCompile:
+         utlbufferutil.cpp
+         utlstring.cpp
+         utlsymbol.cpp
+     9>Lib:
+         mathlib_win64.vcxproj -> D:\a\oldsourcetools\oldsourcetools\sdk\src\lib\public\x64\mathlib.lib
+       FinalizeBuildStatus:
+         Deleting file ".\Release\x64\mathlib.tlog\unsuccessfulbuild".
+         Touching ".\Release\x64\mathlib.tlog\mathlib.lastbuildstate".
+     9>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\mathlib\mathlib_win64.vcxproj" (default targets).
+     8>FinalizeBuildStatus:
+         Deleting file ".\Release\x64\Raytrace.tlog\unsuccessfulbuild".
+         Touching ".\Release\x64\Raytrace.tlog\Raytrace.lastbuildstate".
+     8>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\raytrace\raytrace_win64.vcxproj" (default targets).
+    10>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Z7 /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _LIB /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D _DLL_EXT=.dll /D LIBNAME=tier1 /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D TIER1_STATIC_LIB /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\tier1 /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /EHsc /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp- /Fo".\Release\x64\/" /Fd".\Release\x64\/tier1.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt  /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus processor_detect.cpp
+         processor_detect.cpp
+       Lib:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"..\lib\public\x64\tier1.lib" Rpcrt4.lib /NOLOGO /MACHINE:X64  /ignore:4221      .\Release\x64\/LzmaDec.obj
+         .\Release\x64\/bitbuf.obj
+         .\Release\x64\/byteswap.obj
+         .\Release\x64\/characterset.obj
+         .\Release\x64\/checksum_crc.obj
+         .\Release\x64\/checksum_md5.obj
+         .\Release\x64\/checksum_sha1.obj
+         .\Release\x64\/commandbuffer.obj
+         .\Release\x64\/convar.obj
+         .\Release\x64\/datamanager.obj
+         .\Release\x64\/diff.obj
+         .\Release\x64\/exprevaluator.obj
+         .\Release\x64\/generichash.obj
+         .\Release\x64\/ilocalize.obj
+         .\Release\x64\/interface.obj
+         .\Release\x64\/KeyValues.obj
+         .\Release\x64\/keyvaluesjson.obj
+         .\Release\x64\/kvpacker.obj
+         .\Release\x64\/lzmaDecoder.obj
+         .\Release\x64\/mempool.obj
+         .\Release\x64\/memstack.obj
+         .\Release\x64\/NetAdr.obj
+         .\Release\x64\/newbitbuf.obj
+         .\Release\x64\/processor_detect.obj
+         .\Release\x64\/rangecheckedvar.obj
+         .\Release\x64\/reliabletimer.obj
+         ".\Release\x64\/snappy-sinksource.obj"
+         ".\Release\x64\/snappy-stubs-internal.obj"
+         .\Release\x64\/snappy.obj
+         .\Release\x64\/sparsematrix.obj
+         .\Release\x64\/splitstring.obj
+         .\Release\x64\/stringpool.obj
+         .\Release\x64\/strtools.obj
+         .\Release\x64\/strtools_unicode.obj
+         .\Release\x64\/tier1.obj
+         .\Release\x64\/tokenreader.obj
+         .\Release\x64\/uniqueid.obj
+         .\Release\x64\/utlbinaryblock.obj
+         .\Release\x64\/utlbuffer.obj
+         .\Release\x64\/utlbufferutil.obj
+         .\Release\x64\/utlstring.obj
+         .\Release\x64\/utlsymbol.obj
+         tier1_win64.vcxproj -> D:\a\oldsourcetools\oldsourcetools\sdk\src\lib\public\x64\tier1.lib
+       FinalizeBuildStatus:
+         Deleting file ".\Release\x64\tier1.tlog\unsuccessfulbuild".
+         Touching ".\Release\x64\tier1.tlog\tier1.lastbuildstate".
+    10>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\tier1\tier1_win64.vcxproj" (default targets).
+     1>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (1) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher\vrad_launcher_win64.vcxproj.metaproj" (6) on node 1 (default targets).
+     6>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher\vrad_launcher_win64.vcxproj.metaproj" (6) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher\vrad_launcher_win64.vcxproj" (12) on node 2 (default targets).
+    12>PrepareForBuild:
+         Creating directory ".\Release\x64\".
+         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+         Creating directory ".\Release\x64\VRAD (Launcher).tlog\".
+       InitializeBuildStatus:
+         Creating ".\Release\x64\VRAD (Launcher).tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching ".\Release\x64\VRAD (Launcher).tlog\unsuccessfulbuild".
+       PreBuildEvent:
+         if EXIST ..\..\..\game\bin\x64\vrad.exe for /f "delims=" %%A in ('attrib "..\..\..\game\bin\x64\vrad.exe"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher\Release\x64\"vrad.exe
+         
+         :VCEnd
+     1>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (1) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher\vvis_launcher_win64.vcxproj.metaproj" (4) on node 1 (default targets).
+     4>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher\vvis_launcher_win64.vcxproj.metaproj" (4) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher\vvis_launcher_win64.vcxproj" (14) on node 4 (default targets).
+    14>PrepareForBuild:
+         Creating directory ".\Release\x64\".
+         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+         Creating directory ".\Release\x64\VVIS (Launcher).tlog\".
+     1>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (1) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\vvis_dll_win64.vcxproj.metaproj" (3) on node 1 (default targets).
+     3>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\vvis_dll_win64.vcxproj.metaproj" (3) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\vvis_dll_win64.vcxproj" (15) on node 1 (default targets).
+    15>PrepareForBuild:
+         Creating directory ".\Release\x64\".
+    14>InitializeBuildStatus:
+         Creating ".\Release\x64\VVIS (Launcher).tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching ".\Release\x64\VVIS (Launcher).tlog\unsuccessfulbuild".
+       PreBuildEvent:
+         if EXIST ..\..\..\game\bin\x64\vvis.exe for /f "delims=" %%A in ('attrib "..\..\..\game\bin\x64\vvis.exe"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher\Release\x64\"vvis.exe
+         
+         :VCEnd
+    15>PrepareForBuild:
+         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+         Creating directory ".\Release\x64\VVIS.tlog\".
+       InitializeBuildStatus:
+         Creating ".\Release\x64\VVIS.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching ".\Release\x64\VVIS.tlog\unsuccessfulbuild".
+       PreBuildEvent:
+         if EXIST ..\..\..\game\bin\x64\vvis_dll.dll for /f "delims=" %%A in ('attrib "..\..\..\game\bin\x64\vvis_dll.dll"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\Release\x64\"vvis_dll.dll
+         ..\..\devtools\bin\vpc.exe -crc2 "vvis_dll_win64.vcxproj"
+         
+         :VCEnd
+     1>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (1) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj.metaproj" (5) on node 1 (default targets).
+     5>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj.metaproj" (5) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj" (13) on node 3 (default targets).
+    13>PrepareForBuild:
+         Creating directory ".\Release\x64\".
+         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+         Creating directory ".\Release\x64\VRAD.tlog\".
+       InitializeBuildStatus:
+         Creating ".\Release\x64\VRAD.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching ".\Release\x64\VRAD.tlog\unsuccessfulbuild".
+       PreBuildEvent:
+         if EXIST ..\..\..\game\bin\x64\vrad_dll.dll for /f "delims=" %%A in ('attrib "..\..\..\game\bin\x64\vrad_dll.dll"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\Release\x64\"vrad_dll.dll
+         ..\..\devtools\bin\vpc.exe -crc2 "vrad_dll_win64.vcxproj"
+         
+         :VCEnd
+    12>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D EXENAME=vrad /D _DLL_EXT=.dll /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp- /Yc"stdafx.h" /Fp".\Release\x64\/vrad_launcher.pch" /Fo".\Release\x64\/" /Fd".\Release\x64\/vc143.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt  /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus StdAfx.cpp
+    14>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /I..\common /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D EXENAME=vvis /D _DLL_EXT=.dll /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp- /Yc"stdafx.h" /Fp".\Release\x64\/vvis_launcher.pch" /Fo".\Release\x64\/" /Fd".\Release\x64\/vc143.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt  /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus StdAfx.cpp
+    12>ClCompile:
+         StdAfx.cpp
+     2>Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj.metaproj" (2) is building "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj" (11) on node 1 (default targets).
+    11>PrepareForBuild:
+         Creating directory ".\Release\x64\".
+         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+         Creating directory ".\Release\x64\VBSP.tlog\".
+       InitializeBuildStatus:
+         Creating ".\Release\x64\VBSP.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching ".\Release\x64\VBSP.tlog\unsuccessfulbuild".
+       PreBuildEvent:
+         if EXIST ..\..\..\game\bin\x64\vbsp.exe for /f "delims=" %%A in ('attrib "..\..\..\game\bin\x64\vbsp.exe"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\Release\x64\"vbsp.exe
+         
+         :VCEnd
+    14>ClCompile:
+         StdAfx.cpp
+    15>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /I..\common /I..\vmpi /I..\vmpi\mysql\include /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _WINDLL /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=vvis_dll /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D PROTECTED_THINGS_DISABLE /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo".\Release\x64\/" /Fd".\Release\x64\/vc143.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt /Zm200 /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus ..\common\bsplib.cpp ..\common\cmdlib.cpp ..\..\public\collisionutils.cpp ..\..\public\filesystem_helpers.cpp ..\..\public\filesystem_init.cpp ..\common\filesystem_tools.cpp flow.cpp ..\..\public\loadcmdline.cpp ..\..\public\lumpfiles.cpp ..\common\MySqlDatabase.cpp ..\common\pacifier.cpp ..\..\public\scratchpad3d.cpp ..\common\scratchpad_helpers.cpp ..\common\scriplib.cpp ..\common\threads.cpp ..\common\tools_minidump.cpp vvis.cpp WaterDist.cpp ..\..\public\zip_utils.cpp
+    13>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /I..\common /I..\vmpi /I..\vmpi\mysql\mysqlpp\include /I..\vmpi\mysql\include /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _WINDLL /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=vrad_dll /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D PROTECTED_THINGS_DISABLE /D VRAD /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo".\Release\x64\/" /Fd".\Release\x64\/vc143.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt /Zm200 /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus ..\..\public\BSPTreeData.cpp ..\..\public\disp_common.cpp ..\..\public\disp_powerinfo.cpp disp_vrad.cpp ..\..\public\filesystem_init.cpp ..\common\filesystem_tools.cpp imagepacker.cpp incremental.cpp leaf_ambient_lighting.cpp lightmap.cpp ..\..\public\loadcmdline.cpp ..\..\public\lumpfiles.cpp macro_texture.cpp ..\..\public\tier0\memoverride.cpp ..\common\MySqlDatabase.cpp ..\common\pacifier.cpp ..\common\physdll.cpp radial.cpp SampleHash.cpp trace.cpp ..\common\utilmatlib.cpp vismat.cpp vrad.cpp VRAD_DispColl.cpp VradDetailProps.cpp VRadDisps.cpp vraddll.cpp VRadStaticProps.cpp ..\..\public\zip_utils.cpp ..\common\bsplib.cpp ..\..\public\builddisp.cpp ..\..\public\ChunkFile.cpp ..\common\cmdlib.cpp ..\..\public\DispColl_Common.cpp ..\common\map_shared.cpp ..\common\polylib.cpp ..\common\scriplib.cpp ..\common\threads.cpp ..\common\tools_minidump.cpp ..\..\public\CollisionUtils.cpp ..\..\public\filesystem_helpers.cpp ..\..\public\ScratchPad3D.cpp ..\..\public\ScratchPadUtils.cpp
+    11>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /I..\common /I..\vmpi /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D EXENAME=vbsp /D _DLL_EXT=.dll /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D MACRO_MATHLIB /D PROTECTED_THINGS_DISABLE /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp- /Fo".\Release\x64\/" /Fd".\Release\x64\/vc143.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt  /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus boundbox.cpp brushbsp.cpp ..\..\public\CollisionUtils.cpp csg.cpp cubemap.cpp detail.cpp detailObjects.cpp ..\..\public\disp_common.cpp disp_ivp.cpp ..\..\public\disp_powerinfo.cpp disp_vbsp.cpp faces.cpp glfile.cpp ivp.cpp leakfile.cpp ..\..\public\loadcmdline.cpp ..\..\public\lumpfiles.cpp manifest.cpp map.cpp materialpatch.cpp materialsub.cpp ..\..\public\tier0\memoverride.cpp ..\common\mstristrip.cpp nodraw.cpp normals.cpp overlay.cpp ..\common\physdll.cpp portals.cpp prtfile.cpp ..\..\public\ScratchPad3D.cpp ..\common\scratchpad_helpers.cpp StaticProp.cpp textures.cpp tree.cpp ..\common\utilmatlib.cpp vbsp.cpp worldvertextransitionfixup.cpp writebsp.cpp ..\..\public\zip_utils.cpp ..\common\bsplib.cpp ..\..\public\builddisp.cpp ..\..\public\ChunkFile.cpp ..\common\cmdlib.cpp ..\..\public\filesystem_helpers.cpp ..\..\public\filesystem_init.cpp ..\common\filesystem_tools.cpp ..\common\map_shared.cpp ..\common\pacifier.cpp ..\common\polylib.cpp ..\common\scriplib.cpp ..\common\threads.cpp ..\common\tools_minidump.cpp
+    13>ClCompile:
+         BSPTreeData.cpp
+         disp_common.cpp
+         disp_powerinfo.cpp
+         disp_vrad.cpp
+    15>ClCompile:
+         bsplib.cpp
+         cmdlib.cpp
+         collisionutils.cpp
+         filesystem_helpers.cpp
+    11>ClCompile:
+         boundbox.cpp
+         brushbsp.cpp
+         CollisionUtils.cpp
+         csg.cpp
+    14>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /I..\common /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D EXENAME=vvis /D _DLL_EXT=.dll /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp- /Fo".\Release\x64\/" /Fd".\Release\x64\/vc143.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt  /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus ..\..\public\tier0\memoverride.cpp
+         memoverride.cpp
+    15>ClCompile:
+         filesystem_init.cpp
+    11>ClCompile:
+         cubemap.cpp
+    15>ClCompile:
+         filesystem_tools.cpp
+    13>ClCompile:
+         filesystem_init.cpp
+    11>ClCompile:
+         detail.cpp
+    13>ClCompile:
+         filesystem_tools.cpp
+    15>ClCompile:
+         flow.cpp
+         loadcmdline.cpp
+    11>ClCompile:
+         detailObjects.cpp
+         disp_common.cpp
+         disp_ivp.cpp
+    13>ClCompile:
+         imagepacker.cpp
+    12>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D EXENAME=vrad /D _DLL_EXT=.dll /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp- /Yu"stdafx.h" /Fp".\Release\x64\/vrad_launcher.pch" /Fo".\Release\x64\/" /Fd".\Release\x64\/vc143.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt  /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus vrad_launcher.cpp
+    15>ClCompile:
+         lumpfiles.cpp
+    14>ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /I..\common /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /D VPC /D SOURCESDK /D SOURCE_HAS_FREETYPE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _MBCS /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D PLATFORM_64BITS /D WIN64 /D _WIN64 /D COMPILER_MSVC64 /D COMPILER_MSVC /D EXENAME=vvis /D _DLL_EXT=.dll /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D _DLL_EXT=.dll /D _DLL_PREFIX= /D _EXTERNAL_DLL_EXT=.dll /D PROJECTDIR=D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher /D VPCGAME=valve /D VPCGAMECAPS=VALVE /GF /Gm- /MT /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp- /Yu"stdafx.h" /Fp".\Release\x64\/vvis_launcher.pch" /Fo".\Release\x64\/" /Fd".\Release\x64\/vc143.pdb" /external:W4 /Gd /TP /wd4316 /wd5033 /wd5054 /wd5055 /wd4577 /wd4091 /wd4355 /FC /errorReport:prompt  /Zo /Gw /Zc:inline /Zc:threadSafeInit- /Wv:18 /Zc:__cplusplus vvis_launcher.cpp
+    13>ClCompile:
+         incremental.cpp
+    15>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\flow.cpp(448,9): warning C4101: 'mid': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\vvis_dll_win64.vcxproj]
+       ClCompile:
+         leaf_ambient_lighting.cpp
+    15>ClCompile:
+         MySqlDatabase.cpp
+         pacifier.cpp
+         scratchpad3d.cpp
+    11>ClCompile:
+         disp_powerinfo.cpp
+    15>ClCompile:
+         scratchpad_helpers.cpp
+    11>ClCompile:
+         disp_vbsp.cpp
+    13>ClCompile:
+         lightmap.cpp
+    11>ClCompile:
+         faces.cpp
+    13>ClCompile:
+         loadcmdline.cpp
+         lumpfiles.cpp
+    11>ClCompile:
+         glfile.cpp
+         ivp.cpp
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\lightmap.cpp(1548,17): warning C4101: 'dest': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    15>ClCompile:
+         scriplib.cpp
+         threads.cpp
+         tools_minidump.cpp
+         vvis.cpp
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\lightmap.cpp(2440,9): warning C4101: 'v': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    11>ClCompile:
+         leakfile.cpp
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\ivp.cpp(60,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\ivp.cpp(75,23): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\ivp.cpp(97,23): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\ivp.cpp(120,23): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\ivp.cpp(126,27): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         loadcmdline.cpp
+    12>ClCompile:
+         vrad_launcher.cpp
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\lightmap.cpp(3068,9): warning C4101: 'spot': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    14>ClCompile:
+         vvis_launcher.cpp
+    13>ClCompile:
+         macro_texture.cpp
+    11>ClCompile:
+         lumpfiles.cpp
+         manifest.cpp
+    13>ClCompile:
+         memoverride.cpp
+    15>ClCompile:
+         WaterDist.cpp
+         zip_utils.cpp
+    13>ClCompile:
+         MySqlDatabase.cpp
+    11>ClCompile:
+         map.cpp
+         materialpatch.cpp
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\public\fgdlib\HelperInfo.h(83,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         (compiling source file 'manifest.cpp')
+         
+         materialsub.cpp
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\macro_texture.cpp(156,9): warning C4101: 'vGlobal': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         pacifier.cpp
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\public\fgdlib\HelperInfo.h(83,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         (compiling source file 'map.cpp')
+         
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\map.cpp(2498,32): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+    13>ClCompile:
+         physdll.cpp
+    11>ClCompile:
+         memoverride.cpp
+         mstristrip.cpp
+         nodraw.cpp
+    13>ClCompile:
+         radial.cpp
+         SampleHash.cpp
+         trace.cpp
+    11>ClCompile:
+         normals.cpp
+    12>Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\x64\\vrad.exe" /INCREMENTAL:NO /NOLOGO shell32.lib user32.lib advapi32.lib gdi32.lib comdlg32.lib ole32.lib /NODEFAULTLIB:libc /NODEFAULTLIB:libcd /NODEFAULTLIB:libcmtd /NODEFAULTLIB:libcpmtd /NODEFAULTLIB:libcpmtd0 /NODEFAULTLIB:libcpmtd1 /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:".\Release\x64\/vrad.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:NOICF /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:".\Release\x64\vrad.lib" /MACHINE:X64 /SAFESEH:NO /NXCOMPAT /ignore:4221 .\Release\x64\/StdAfx.obj
+         .\Release\x64\/vrad_launcher.obj
+         ..\..\lib\public\x64\tier0.lib
+         ..\..\lib\public\x64\tier1.lib
+         ..\..\lib\public\x64\vstdlib.lib
+    13>ClCompile:
+         utilmatlib.cpp
+    11>ClCompile:
+         overlay.cpp
+    14>Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\x64\\vvis.exe" /INCREMENTAL:NO /NOLOGO shell32.lib user32.lib advapi32.lib gdi32.lib comdlg32.lib ole32.lib /NODEFAULTLIB:libc /NODEFAULTLIB:libcd /NODEFAULTLIB:libcmtd /NODEFAULTLIB:libcpmtd /NODEFAULTLIB:libcpmtd0 /NODEFAULTLIB:libcpmtd1 /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:".\Release\x64\/vvis.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:NOICF /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:".\Release\x64\vvis.lib" /MACHINE:X64 /SAFESEH:NO /NXCOMPAT /ignore:4221 .\Release\x64\/memoverride.obj
+         .\Release\x64\/StdAfx.obj
+         .\Release\x64\/vvis_launcher.obj
+         ..\..\lib\public\x64\tier0.lib
+         ..\..\lib\public\x64\tier1.lib
+         ..\..\lib\public\x64\vstdlib.lib
+    15>Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\x64\\vvis_dll.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\lib\common\x64\2015\release /LIBPATH:..\..\lib\public\x64 shell32.lib user32.lib advapi32.lib gdi32.lib comdlg32.lib ole32.lib odbc32.lib odbccp32.lib ws2_32.lib /NODEFAULTLIB:libc /NODEFAULTLIB:libcd /NODEFAULTLIB:libcmtd /NODEFAULTLIB:libcpmtd /NODEFAULTLIB:libcpmtd0 /NODEFAULTLIB:libcpmtd1 /MANIFEST:NO /DEBUG:FULL /PDB:".\Release\x64\/vvis_dll.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:NOICF /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:".\Release\x64\vvis_dll.lib" /MACHINE:X64 /SAFESEH:NO  /ignore:4221 /DLL .\Release\x64\/bsplib.obj
+         .\Release\x64\/cmdlib.obj
+         .\Release\x64\/collisionutils.obj
+         .\Release\x64\/filesystem_helpers.obj
+         .\Release\x64\/filesystem_init.obj
+         .\Release\x64\/filesystem_tools.obj
+         .\Release\x64\/flow.obj
+         .\Release\x64\/loadcmdline.obj
+         .\Release\x64\/lumpfiles.obj
+         .\Release\x64\/MySqlDatabase.obj
+         .\Release\x64\/pacifier.obj
+         .\Release\x64\/scratchpad3d.obj
+         .\Release\x64\/scratchpad_helpers.obj
+         .\Release\x64\/scriplib.obj
+         .\Release\x64\/threads.obj
+         .\Release\x64\/tools_minidump.obj
+         .\Release\x64\/vvis.obj
+         .\Release\x64\/WaterDist.obj
+         .\Release\x64\/zip_utils.obj
+         ..\..\lib\common\x64\2015\release\lzma.lib
+         ..\..\lib\public\x64\mathlib.lib
+         ..\..\lib\public\x64\tier0.lib
+         ..\..\lib\public\x64\tier1.lib
+         ..\..\lib\public\x64\tier2.lib
+         ..\..\lib\public\x64\vstdlib.lib
+    11>ClCompile:
+         physdll.cpp
+    13>ClCompile:
+         vismat.cpp
+    11>ClCompile:
+         portals.cpp
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\trace.cpp(408,29): warning C4101: 'skytrans': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+       ClCompile:
+         prtfile.cpp
+         ScratchPad3D.cpp
+         scratchpad_helpers.cpp
+    13>ClCompile:
+         vrad.cpp
+    11>ClCompile:
+         StaticProp.cpp
+         textures.cpp
+    13>ClCompile:
+         VRAD_DispColl.cpp
+    11>ClCompile:
+         tree.cpp
+         utilmatlib.cpp
+    13>ClCompile:
+         VradDetailProps.cpp
+    11>ClCompile:
+         vbsp.cpp
+         worldvertextransitionfixup.cpp
+    13>ClCompile:
+         VRadDisps.cpp
+    11>ClCompile:
+         writebsp.cpp
+         zip_utils.cpp
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad.cpp(1118,9): warning C4101: 'delta': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp.cpp(1358,73): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp.cpp(1415,74): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+    15>Link:
+            Creating library .\Release\x64\vvis_dll.lib and object .\Release\x64\vvis_dll.exp
+    11>ClCompile:
+         bsplib.cpp
+         builddisp.cpp
+    13>ClCompile:
+         vraddll.cpp
+    14>Link:
+            Creating library .\Release\x64\vvis.lib and object .\Release\x64\vvis.exp
+    13>ClCompile:
+         VRadStaticProps.cpp
+    11>ClCompile:
+         ChunkFile.cpp
+    12>Link:
+            Creating library .\Release\x64\vrad.lib and object .\Release\x64\vrad.exp
+    11>ClCompile:
+         cmdlib.cpp
+         filesystem_helpers.cpp
+    13>ClCompile:
+         zip_utils.cpp
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ChunkFile.cpp(957,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ChunkFile.cpp(967,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+    11>D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ChunkFile.cpp(968,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         filesystem_init.cpp
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vraddll.cpp(180,50): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    11>ClCompile:
+         filesystem_tools.cpp
+         map_shared.cpp
+    13>ClCompile:
+         bsplib.cpp
+    15>Link:
+         vvis_dll_win64.vcxproj -> D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\Release\x64\vvis_dll.dll
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(177,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    11>ClCompile:
+         pacifier.cpp
+         polylib.cpp
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(178,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+       ClCompile:
+         scriplib.cpp
+         threads.cpp
+         tools_minidump.cpp
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(179,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(180,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    14>Link:
+         vvis_launcher_win64.vcxproj -> D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher\Release\x64\vvis.exe
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(185,10): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(186,10): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    12>Link:
+         vrad_launcher_win64.vcxproj -> D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher\Release\x64\vrad.exe
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2401,24): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2409,32): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2410,26): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2423,20): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2424,20): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2425,20): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2426,20): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2427,20): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         builddisp.cpp
+         ChunkFile.cpp
+         cmdlib.cpp
+         DispColl_Common.cpp
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ChunkFile.cpp(957,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ChunkFile.cpp(967,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ChunkFile.cpp(968,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         map_shared.cpp
+         polylib.cpp
+         scriplib.cpp
+         threads.cpp
+         tools_minidump.cpp
+         CollisionUtils.cpp
+         filesystem_helpers.cpp
+         ScratchPad3D.cpp
+         ScratchPadUtils.cpp
+    13>D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ScratchPadUtils.cpp(224,9): warning C4101: 'topColor': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+       PostBuildEvent:
+         Publishing to ..\..\..\game\bin\x64
+         copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher\Release\x64\"vrad.exe ..\..\..\game\bin\x64\vrad.exe >nul
+         if ERRORLEVEL 1 goto BuildEventFailed
+         if exist "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher\Release\x64\"vrad.map copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher\Release\x64\"vrad.map ..\..\..\game\bin\x64\vrad.map >nul
+         copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher\Release\x64\"vrad.pdb ..\..\..\game\bin\x64\vrad.pdb >nul
+         if ERRORLEVEL 1 goto BuildEventFailed
+         goto BuildEventOK
+         :BuildEventFailed
+         echo *** ERROR! PostBuildStep FAILED for VRAD (Launcher)! EXE or DLL is probably running. ***
+         del /q "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher\Release\x64\"vrad.exe
+         exit 1
+         :BuildEventOK
+         
+         :VCEnd
+       FinalizeBuildStatus:
+         Deleting file ".\Release\x64\VRAD (Launcher).tlog\unsuccessfulbuild".
+         Touching ".\Release\x64\VRAD (Launcher).tlog\VRAD (Launcher).lastbuildstate".
+    12>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher\vrad_launcher_win64.vcxproj" (default targets).
+     6>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad_launcher\vrad_launcher_win64.vcxproj.metaproj" (default targets).
+    14>PostBuildEvent:
+         Publishing to ..\..\..\game\bin\x64
+         copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher\Release\x64\"vvis.exe ..\..\..\game\bin\x64\vvis.exe >nul
+         if ERRORLEVEL 1 goto BuildEventFailed
+         if exist "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher\Release\x64\"vvis.map copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher\Release\x64\"vvis.map ..\..\..\game\bin\x64\vvis.map >nul
+         copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher\Release\x64\"vvis.pdb ..\..\..\game\bin\x64\vvis.pdb >nul
+         if ERRORLEVEL 1 goto BuildEventFailed
+         goto BuildEventOK
+         :BuildEventFailed
+         echo *** ERROR! PostBuildStep FAILED for VVIS (Launcher)! EXE or DLL is probably running. ***
+         del /q "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher\Release\x64\"vvis.exe
+         exit 1
+         :BuildEventOK
+         
+         :VCEnd
+    15>PostBuildEvent:
+         Publishing to ..\..\..\game\bin\x64
+         if not exist "..\..\..\game\bin\x64" mkdir "..\..\..\game\bin\x64"
+         copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\Release\x64\vvis_dll.dll" "..\..\..\game\bin\x64\vvis_dll.dll"
+         if ERRORLEVEL 1 goto BuildEventFailed
+         if exist "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\Release\x64\vvis_dll.map" copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\Release\x64\vvis_dll.map" ..\..\..\game\bin\x64\vvis_dll.map
+         copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\Release\x64\vvis_dll.pdb" ..\..\..\game\bin\x64\vvis_dll.pdb
+         if ERRORLEVEL 1 goto BuildEventFailed
+         goto BuildEventOK
+         :BuildEventFailed
+         echo *** ERROR! PostBuildStep FAILED for VVIS! EXE or DLL is probably running. ***
+         del /q "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\Release\x64\vvis_dll.dll"
+         exit 1
+         :BuildEventOK
+         
+         :VCEnd
+    13>Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\x64\\vrad_dll.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\lib\common\x64\2015\release /LIBPATH:..\..\lib\public\x64 shell32.lib user32.lib advapi32.lib gdi32.lib comdlg32.lib ole32.lib ws2_32.lib /NODEFAULTLIB:libc /NODEFAULTLIB:libcd /NODEFAULTLIB:libcmtd /NODEFAULTLIB:libcpmtd /NODEFAULTLIB:libcpmtd0 /NODEFAULTLIB:libcpmtd1 /MANIFEST:NO /DEBUG:FULL /PDB:".\Release\x64\/vrad_dll.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:NOICF /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:".\Release\x64\vrad_dll.lib" /MACHINE:X64 /SAFESEH:NO  /ignore:4221 /DLL .\Release\x64\/BSPTreeData.obj
+         .\Release\x64\/disp_common.obj
+         .\Release\x64\/disp_powerinfo.obj
+         .\Release\x64\/disp_vrad.obj
+         .\Release\x64\/filesystem_init.obj
+         .\Release\x64\/filesystem_tools.obj
+         .\Release\x64\/imagepacker.obj
+         .\Release\x64\/incremental.obj
+         .\Release\x64\/leaf_ambient_lighting.obj
+         .\Release\x64\/lightmap.obj
+         .\Release\x64\/loadcmdline.obj
+         .\Release\x64\/lumpfiles.obj
+         .\Release\x64\/macro_texture.obj
+         .\Release\x64\/memoverride.obj
+         .\Release\x64\/MySqlDatabase.obj
+         .\Release\x64\/pacifier.obj
+         .\Release\x64\/physdll.obj
+         .\Release\x64\/radial.obj
+         .\Release\x64\/SampleHash.obj
+         .\Release\x64\/trace.obj
+         .\Release\x64\/utilmatlib.obj
+         .\Release\x64\/vismat.obj
+         .\Release\x64\/vrad.obj
+         .\Release\x64\/VRAD_DispColl.obj
+         .\Release\x64\/VradDetailProps.obj
+         .\Release\x64\/VRadDisps.obj
+         .\Release\x64\/vraddll.obj
+         .\Release\x64\/VRadStaticProps.obj
+         .\Release\x64\/zip_utils.obj
+         .\Release\x64\/bsplib.obj
+         .\Release\x64\/builddisp.obj
+         .\Release\x64\/ChunkFile.obj
+         .\Release\x64\/cmdlib.obj
+         .\Release\x64\/DispColl_Common.obj
+         .\Release\x64\/map_shared.obj
+         .\Release\x64\/polylib.obj
+         .\Release\x64\/scriplib.obj
+         .\Release\x64\/threads.obj
+         .\Release\x64\/tools_minidump.obj
+         .\Release\x64\/CollisionUtils.obj
+         .\Release\x64\/filesystem_helpers.obj
+         .\Release\x64\/ScratchPad3D.obj
+         .\Release\x64\/ScratchPadUtils.obj
+         ..\..\lib\public\x64\bitmap.lib
+         ..\..\lib\common\x64\2015\release\lzma.lib
+         ..\..\lib\public\x64\mathlib.lib
+         ..\..\lib\public\x64\raytrace.lib
+         ..\..\lib\public\x64\tier0.lib
+         ..\..\lib\public\x64\tier1.lib
+         ..\..\lib\public\x64\tier2.lib
+         ..\..\lib\public\x64\vstdlib.lib
+         ..\..\lib\public\x64\vtf.lib
+    14>FinalizeBuildStatus:
+         Deleting file ".\Release\x64\VVIS (Launcher).tlog\unsuccessfulbuild".
+         Touching ".\Release\x64\VVIS (Launcher).tlog\VVIS (Launcher).lastbuildstate".
+    14>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher\vvis_launcher_win64.vcxproj" (default targets).
+    15>PostBuildEvent:
+                 1 file(s) copied.
+                 1 file(s) copied.
+       FinalizeBuildStatus:
+         Deleting file ".\Release\x64\VVIS.tlog\unsuccessfulbuild".
+         Touching ".\Release\x64\VVIS.tlog\VVIS.lastbuildstate".
+    15>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\vvis_dll_win64.vcxproj" (default targets).
+     4>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis_launcher\vvis_launcher_win64.vcxproj.metaproj" (default targets).
+     3>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\vvis_dll_win64.vcxproj.metaproj" (default targets).
+    11>Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\x64\\vbsp.exe" /INCREMENTAL:NO /NOLOGO shell32.lib user32.lib advapi32.lib gdi32.lib comdlg32.lib ole32.lib ws2_32.lib odbc32.lib odbccp32.lib winmm.lib /NODEFAULTLIB:libc /NODEFAULTLIB:libcd /NODEFAULTLIB:libcmtd /NODEFAULTLIB:libcpmtd /NODEFAULTLIB:libcpmtd0 /NODEFAULTLIB:libcpmtd1 /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:".\Release\x64\/vbsp.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:NOICF /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:".\Release\x64\vbsp.lib" /MACHINE:X64 /SAFESEH:NO /NXCOMPAT /ignore:4221 .\Release\x64\/boundbox.obj
+         .\Release\x64\/brushbsp.obj
+         .\Release\x64\/CollisionUtils.obj
+         .\Release\x64\/csg.obj
+         .\Release\x64\/cubemap.obj
+         .\Release\x64\/detail.obj
+         .\Release\x64\/detailObjects.obj
+         .\Release\x64\/disp_common.obj
+         .\Release\x64\/disp_ivp.obj
+         .\Release\x64\/disp_powerinfo.obj
+         .\Release\x64\/disp_vbsp.obj
+         .\Release\x64\/faces.obj
+         .\Release\x64\/glfile.obj
+         .\Release\x64\/ivp.obj
+         .\Release\x64\/leakfile.obj
+         .\Release\x64\/loadcmdline.obj
+         .\Release\x64\/lumpfiles.obj
+         .\Release\x64\/manifest.obj
+         .\Release\x64\/map.obj
+         .\Release\x64\/materialpatch.obj
+         .\Release\x64\/materialsub.obj
+         .\Release\x64\/memoverride.obj
+         .\Release\x64\/mstristrip.obj
+         .\Release\x64\/nodraw.obj
+         .\Release\x64\/normals.obj
+         .\Release\x64\/overlay.obj
+         .\Release\x64\/physdll.obj
+         .\Release\x64\/portals.obj
+         .\Release\x64\/prtfile.obj
+         .\Release\x64\/ScratchPad3D.obj
+         .\Release\x64\/scratchpad_helpers.obj
+         .\Release\x64\/StaticProp.obj
+         .\Release\x64\/textures.obj
+         .\Release\x64\/tree.obj
+         .\Release\x64\/utilmatlib.obj
+         .\Release\x64\/vbsp.obj
+         .\Release\x64\/worldvertextransitionfixup.obj
+         .\Release\x64\/writebsp.obj
+         .\Release\x64\/zip_utils.obj
+         .\Release\x64\/bsplib.obj
+         .\Release\x64\/builddisp.obj
+         .\Release\x64\/ChunkFile.obj
+         .\Release\x64\/cmdlib.obj
+         .\Release\x64\/filesystem_helpers.obj
+         .\Release\x64\/filesystem_init.obj
+         .\Release\x64\/filesystem_tools.obj
+         .\Release\x64\/map_shared.obj
+         .\Release\x64\/pacifier.obj
+         .\Release\x64\/polylib.obj
+         .\Release\x64\/scriplib.obj
+         .\Release\x64\/threads.obj
+         .\Release\x64\/tools_minidump.obj
+         ..\..\lib\public\x64\bitmap.lib
+         ..\..\lib\public\x64\fgdlib.lib
+         ..\..\lib\common\x64\2015\release\lzma.lib
+         ..\..\lib\public\x64\mathlib.lib
+         ..\..\lib\public\x64\tier0.lib
+         ..\..\lib\public\x64\tier1.lib
+         ..\..\lib\public\x64\tier2.lib
+         ..\..\lib\public\x64\vstdlib.lib
+         ..\..\lib\public\x64\vtf.lib
+    13>Link:
+            Creating library .\Release\x64\vrad_dll.lib and object .\Release\x64\vrad_dll.exp
+    11>Link:
+            Creating library .\Release\x64\vbsp.lib and object .\Release\x64\vbsp.exp
+    13>Link:
+         vrad_dll_win64.vcxproj -> D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\Release\x64\vrad_dll.dll
+       PostBuildEvent:
+         Publishing to ..\..\..\game\bin\x64
+         if not exist "..\..\..\game\bin\x64" mkdir "..\..\..\game\bin\x64"
+         copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\Release\x64\vrad_dll.dll" "..\..\..\game\bin\x64\vrad_dll.dll"
+         if ERRORLEVEL 1 goto BuildEventFailed
+         if exist "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\Release\x64\vrad_dll.map" copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\Release\x64\vrad_dll.map" ..\..\..\game\bin\x64\vrad_dll.map
+         copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\Release\x64\vrad_dll.pdb" ..\..\..\game\bin\x64\vrad_dll.pdb
+         if ERRORLEVEL 1 goto BuildEventFailed
+         goto BuildEventOK
+         :BuildEventFailed
+         echo *** ERROR! PostBuildStep FAILED for VRAD! EXE or DLL is probably running. ***
+         del /q "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\Release\x64\vrad_dll.dll"
+         exit 1
+         :BuildEventOK
+         
+         :VCEnd
+    11>Link:
+         vbsp_win64.vcxproj -> D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\Release\x64\vbsp.exe
+    13>PostBuildEvent:
+                 1 file(s) copied.
+                 1 file(s) copied.
+    11>PostBuildEvent:
+         Publishing to ..\..\..\game\bin\x64
+         copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\Release\x64\"vbsp.exe ..\..\..\game\bin\x64\vbsp.exe >nul
+         if ERRORLEVEL 1 goto BuildEventFailed
+         if exist "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\Release\x64\"vbsp.map copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\Release\x64\"vbsp.map ..\..\..\game\bin\x64\vbsp.map >nul
+         copy "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\Release\x64\"vbsp.pdb ..\..\..\game\bin\x64\vbsp.pdb >nul
+         if ERRORLEVEL 1 goto BuildEventFailed
+         goto BuildEventOK
+         :BuildEventFailed
+         echo *** ERROR! PostBuildStep FAILED for VBSP! EXE or DLL is probably running. ***
+         del /q "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\Release\x64\"vbsp.exe
+         exit 1
+         :BuildEventOK
+         
+         :VCEnd
+    13>FinalizeBuildStatus:
+         Deleting file ".\Release\x64\VRAD.tlog\unsuccessfulbuild".
+         Touching ".\Release\x64\VRAD.tlog\VRAD.lastbuildstate".
+    13>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj" (default targets).
+    11>FinalizeBuildStatus:
+         Deleting file ".\Release\x64\VBSP.tlog\unsuccessfulbuild".
+         Touching ".\Release\x64\VBSP.tlog\VBSP.lastbuildstate".
+    11>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj" (default targets).
+     5>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj.metaproj" (default targets).
+     2>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj.metaproj" (default targets).
+     1>Done Building Project "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (default targets).
+
+Build succeeded.
+
+       "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (default target) (1) ->
+       "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj.metaproj" (default target) (2) ->
+       "D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\fgdlib_win64.vcxproj" (default target) (7) ->
+       (ClCompile target) -> 
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\public\fgdlib\HelperInfo.h(83,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\fgdlib_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\public\fgdlib\HelperInfo.h(83,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\fgdlib_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\wckeyvalues.cpp(194,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\fgdlib_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\public\fgdlib\HelperInfo.h(83,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\fgdlib\fgdlib_win64.vcxproj]
+
+
+       "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (default target) (1) ->
+       "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\vvis_dll_win64.vcxproj.metaproj" (default target) (3) ->
+       "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\vvis_dll_win64.vcxproj" (default target) (15) ->
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\flow.cpp(448,9): warning C4101: 'mid': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vvis\vvis_dll_win64.vcxproj]
+
+
+       "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (default target) (1) ->
+       "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj.metaproj" (default target) (5) ->
+       "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj" (default target) (13) ->
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\lightmap.cpp(1548,17): warning C4101: 'dest': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\lightmap.cpp(2440,9): warning C4101: 'v': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\lightmap.cpp(3068,9): warning C4101: 'spot': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\macro_texture.cpp(156,9): warning C4101: 'vGlobal': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\trace.cpp(408,29): warning C4101: 'skytrans': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad.cpp(1118,9): warning C4101: 'delta': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vraddll.cpp(180,50): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(177,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(178,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(179,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(180,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(185,10): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(186,10): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2401,24): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2409,32): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2410,26): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2423,20): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2424,20): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2425,20): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2426,20): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\VRadStaticProps.cpp(2427,20): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ChunkFile.cpp(957,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ChunkFile.cpp(967,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ChunkFile.cpp(968,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ScratchPadUtils.cpp(224,9): warning C4101: 'topColor': unreferenced local variable [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vrad\vrad_dll_win64.vcxproj]
+
+
+       "D:\a\oldsourcetools\oldsourcetools\sdk\src\oldsource_compilers.sln" (default target) (1) ->
+       "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj.metaproj" (default target) (2) ->
+       "D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj" (default target) (11) ->
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\ivp.cpp(60,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\ivp.cpp(75,23): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\ivp.cpp(97,23): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\ivp.cpp(120,23): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\ivp.cpp(126,27): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\public\fgdlib\HelperInfo.h(83,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\public\fgdlib\HelperInfo.h(83,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\map.cpp(2498,32): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp.cpp(1358,73): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp.cpp(1415,74): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ChunkFile.cpp(957,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ChunkFile.cpp(967,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+         D:\a\oldsourcetools\oldsourcetools\sdk\src\public\ChunkFile.cpp(968,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [D:\a\oldsourcetools\oldsourcetools\sdk\src\utils\vbsp\vbsp_win64.vcxproj]
+
+    43 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:01:00.33
