@@ -4,7 +4,7 @@ Valve's **vbsp**, **vvis** and **vrad** from the Source SDK 2013 (the 2025 Team 
 
 - `changes/src/...` – the 8 changed files, in the same folders as in Valve's code
 - `oldsource_compilers.patch` – the same changes as one patch
-- `../.github/workflows/build-compilers.yml` – GitHub builds the compilers on Windows whenever the changes change (or by hand: Actions > Build Old Source compilers > Run workflow); the result is the **OldSourceCompilers** artifact of the run
+- `../.github/workflows/build-compilers.yml` – GitHub builds the compilers on Windows whenever the changes change (or by hand: Actions > Build Old Source compilers > Run workflow); the result is the **OldSourceCompilers** artifact of the run and the **compilers-build** branch (the five files, INSTALL.txt and the build logs)
 - `INSTALL.txt` – where the five built files go
 
 ## What is different from Valve's compilers

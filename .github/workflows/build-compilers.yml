@@ -1,6 +1,7 @@
 # Builds Valve's vbsp, vvis and vrad (Source SDK code of 9 October 2026) with the changes in
 # compilers/changes, which make them write maps in the Old Source format. The result is the
-# "OldSourceCompilers" artifact of the run.
+# "OldSourceCompilers" artifact of the run, and the compilers-build branch (the five files,
+# INSTALL.txt and the build logs) after every run.
 name: Build Old Source compilers
 
 on:
@@ -11,7 +12,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -52,7 +53,7 @@ jobs:
         shell: pwsh
         working-directory: sdk/src
         run: |
-          .\devtools\bin\vpc.exe /hl2mp /tf /define:SOURCESDK +tier1 +mathlib +raytrace +fgdlib +vbsp +vvis_dll +vvis_launcher +vrad_dll +vrad_launcher /mksln oldsource_compilers.sln
+          .\devtools\bin\vpc.exe /hl2mp /tf /define:SOURCESDK +tier1 +mathlib +raytrace +fgdlib +vbsp +vvis_dll +vvis_launcher +vrad_dll +vrad_launcher /mksln oldsource_compilers.sln | Tee-Object -FilePath "$env:GITHUB_WORKSPACE\vpc_log.txt"
           if (!(Test-Path oldsource_compilers.sln)) { throw "VPC made no solution" }
 
       - name: Build
@@ -72,6 +73,8 @@ jobs:
             $extra += "/p:PlatformToolset=$newer"
           }
           New-Item -ItemType Directory -Force ..\game\bin\x64 | Out-Null
+          "Visual Studio: $vs" | Out-File -Encoding utf8 "$env:GITHUB_WORKSPACE\environment.txt"
+          "Toolsets: $($toolsets -join ', ')" | Out-File -Append -Encoding utf8 "$env:GITHUB_WORKSPACE\environment.txt"
           & $msbuild oldsource_compilers.sln /p:Configuration=Release /p:Platform=win64 /m /nr:false /nologo /v:minimal /fl "/flp:logfile=$env:GITHUB_WORKSPACE\build_log.txt;verbosity=normal" @extra
           if ($LASTEXITCODE -ne 0) { throw "the build failed" }
 
@@ -102,3 +105,24 @@ jobs:
           name: build_log
           path: build_log.txt
           if-no-files-found: ignore
+
+      - name: Put the results on the compilers-build branch
+        if: always()
+        shell: pwsh
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          $pub = Join-Path $env:RUNNER_TEMP "compilers-build"
+          New-Item -ItemType Directory -Force $pub | Out-Null
+          if (Test-Path OldSourceCompilers) { Copy-Item OldSourceCompilers\* $pub }
+          foreach ($f in 'build_log.txt', 'vpc_log.txt', 'environment.txt') { if (Test-Path $f) { Copy-Item $f $pub } }
+          "Built from $env:GITHUB_SHA by run $env:GITHUB_RUN_ID (Valve's code $env:SDK_COMMIT)" | Out-File -Encoding utf8 "$pub\built_from.txt"
+          cd $pub
+          git init -q
+          git checkout -q -b compilers-build
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Old Source compilers built by run $env:GITHUB_RUN_ID"
+          git push -q -f "https://x-access-token:$env:TOKEN@github.com/$env:GITHUB_REPOSITORY.git" compilers-build
+          if ($LASTEXITCODE -ne 0) { throw "push failed" }
